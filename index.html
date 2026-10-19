@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101010">
+<title>Maudivash Mart — Digital Store</title>
+<style>
+:root{--bg:#0b0b0d;--panel:#151518;--panel2:#1d1d22;--red:#c51f3a;--red2:#f0445d;--text:#f7f4f5;--muted:#aaa3a7;--line:#30252a;--green:#57d69a}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top right,#291016 0,transparent 38%),var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+a{color:inherit;text-decoration:none}.wrap{width:min(1100px,92%);margin:auto}
+header{position:sticky;top:0;z-index:10;background:#0b0b0deF;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:1.3px}.logo{width:42px;height:42px;border-radius:12px;background:linear-gradient(140deg,var(--red2),#700d20);display:grid;place-items:center;font-weight:950;box-shadow:0 7px 24px #c51f3a33}.brand small{display:block;color:var(--muted);font-size:10px;letter-spacing:2px;margin-top:3px}.navlinks{display:flex;gap:20px;color:#d8d2d5;font-size:13px}.navlinks a:hover{color:var(--red2)}
+.hero{padding:70px 0 45px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}.eyebrow{color:var(--red2);font-size:11px;letter-spacing:3px;font-weight:800}.hero h1{font-size:clamp(38px,6vw,67px);line-height:1.02;letter-spacing:-2px;margin:15px 0}.hero h1 span{color:var(--red2)}.hero p{color:var(--muted);max-width:510px;line-height:1.8}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}.btn{border:0;border-radius:10px;padding:13px 18px;font-weight:800;display:inline-flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px}.primary{background:var(--red);color:white}.primary:hover{background:var(--red2)}.secondary{border:1px solid #554047;background:#171316;color:#fff}.hero-card{border:1px solid #4a242d;background:linear-gradient(145deg,#201116,#111114 70%);border-radius:22px;padding:25px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 25px 65px #0008}.hero-card .cross{font-size:52px;color:var(--red2);text-align:right}.hero-card h2{margin:0;font-size:24px}.hero-card p{font-size:12px;margin-bottom:0}
+section{padding:32px 0 45px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin-bottom:20px}.section-head h2{font-size:27px;margin:7px 0 0}.section-head p{color:var(--muted);font-size:13px;margin:0}.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}.search{flex:1;min-width:190px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:12px 14px;color:white;font:inherit}.filter{background:var(--panel);color:#ddd;border:1px solid var(--line);border-radius:10px;padding:11px 13px;font:inherit}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.product{background:linear-gradient(155deg,#19191d,#111113);border:1px solid var(--line);border-radius:17px;padding:17px;display:flex;flex-direction:column;min-height:240px;transition:.2s}.product:hover{transform:translateY(-3px);border-color:#74303e}.product-top{display:flex;justify-content:space-between;align-items:start;gap:10px}.product-icon{width:48px;height:48px;border-radius:13px;background:#35131c;border:1px solid #5d2532;display:grid;place-items:center;font-size:23px}.pill{font-size:10px;font-weight:800;padding:6px 9px;border-radius:999px;background:#153326;color:var(--green)}.pill.out{background:#30272a;color:#c0b5b9}.product h3{font-size:17px;margin:17px 0 6px}.product .desc{font-size:12px;color:var(--muted);line-height:1.6;margin:0 0 15px}.price-row{display:flex;justify-content:space-between;align-items:center;margin-top:auto;padding-top:12px}.price{font-size:19px;font-weight:900}.stock{font-size:11px;color:var(--muted)}.product .btn{width:100%;margin-top:13px}.btn:disabled{opacity:.4;cursor:not-allowed}
+.info-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.info{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:19px}.info .ico{color:var(--red2);font-size:23px}.info h3{font-size:14px;margin:12px 0 7px}.info p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}
+.paybox{background:linear-gradient(130deg,#241116,#151518);border:1px solid #4a242d;border-radius:18px;padding:24px;display:grid;grid-template-columns:1fr 1fr;gap:24px}.paybox h3{margin:0 0 9px}.paybox p{color:var(--muted);font-size:13px;line-height:1.7}.paymethods{display:flex;flex-wrap:wrap;gap:8px}.paymethods span{background:#171719;border:1px solid #443139;padding:9px 12px;border-radius:8px;font-size:12px}
+footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-size:12px}.foot{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+.notice{font-size:11px;color:#8f8589;line-height:1.6;margin-top:18px}
+@media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-card{min-height:180px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr}.paybox{grid-template-columns:1fr}.navlinks{gap:12px;font-size:12px}.brand{font-size:13px}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}.navlinks a:nth-child(2){display:none}.section-head{align-items:start;flex-direction:column}.hero h1{letter-spacing:-1.5px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#"><span class="logo">M</span><span>MAUDIVASH MART<small>DIGITAL GOODS STORE</small></span></a>
+  <nav class="navlinks"><a href="#katalog">Katalog</a><a href="#pembayaran">Pembayaran</a><a href="#kontak">Kontak</a></nav>
+</div></header>
+<main>
+<div class="wrap hero">
+  <div><div class="eyebrow">YOUR DIGITAL NEEDS, ONE PLACE</div><h1>Upgrade Your<br><span>Digital Life.</span></h1>
+  <p>Temukan produk digital pilihan dengan harga yang jelas dan proses pemesanan yang praktis. Cek stok, pilih produk, lalu pesan melalui WhatsApp.</p>
+  <div class="actions"><a class="btn primary" href="#katalog">Jelajahi Katalog ↗</a><a class="btn secondary" id="heroChat" href="#kontak">Hubungi Admin</a></div></div>
+  <div class="hero-card"><div class="cross">⌖</div><div><div class="eyebrow">MAUDIVASH / DIGITAL</div><h2>Simple. Secure. Convenient.</h2><p>Pastikan detail produk, stok, dan metode pembayaran sebelum transaksi.</p></div></div>
+</div>
+<section id="katalog"><div class="wrap">
+  <div class="section-head"><div><div class="eyebrow">PILIH PRODUK</div><h2>Katalog Produk</h2></div><p>Stok dan harga mengikuti pembaruan admin.</p></div>
+  <div class="filters"><input class="search" id="search" type="search" placeholder="Cari produk..." aria-label="Cari produk"><select class="filter" id="category" aria-label="Kategori"><option value="all">Semua kategori</option><option value="Streaming">Streaming</option><option value="Aplikasi">Aplikasi</option><option value="Lainnya">Lainnya</option></select></div>
+  <div class="grid" id="products"></div>
+  <p class="notice">Catatan: produk dan harga pada template ini hanyalah contoh. Ganti dengan produk yang sah untuk dijual, harga aktual, dan stok sebenarnya sebelum dipublikasikan.</p>
+</div></section>
+<section><div class="wrap"><div class="section-head"><div><div class="eyebrow">KENAPA DI SINI?</div><h2>Belanja dengan jelas</h2></div></div>
+<div class="info-grid">
+<div class="info"><div class="ico">◈</div><h3>Info transparan</h3><p>Harga dan status stok ditampilkan pada katalog agar pembeli bisa mengecek sebelum memesan.</p></div>
+<div class="info"><div class="ico">⌁</div><h3>Pemesanan praktis</h3><p>Tombol pesan menyiapkan detail produk di WhatsApp untuk dikonfirmasi bersama admin.</p></div>
+<div class="info"><div class="ico">✓</div><h3>Konfirmasi admin</h3><p>Pastikan stok, masa aktif, ketentuan penggunaan, dan total pembayaran sebelum transfer.</p></div>
+</div></div></section>
+<section id="pembayaran"><div class="wrap"><div class="paybox">
+<div><div class="eyebrow">PEMBAYARAN</div><h2>Metode Pembayaran</h2><p>Metode pembayaran yang tersedia akan dikonfirmasi admin saat pemesanan. Jangan transfer sebelum detail pesanan dan nominal dipastikan.</p><div class="paymethods"><span>QRIS</span><span>Transfer Bank</span><span>E-wallet</span></div></div>
+<div><h3>Langkah pemesanan</h3><p>01 — Pilih produk dan tekan “Pesan via WhatsApp”.<br>02 — Admin mengonfirmasi stok dan total.<br>03 — Lakukan pembayaran ke kanal resmi yang diberikan admin.<br>04 — Kirim bukti pembayaran dan tunggu konfirmasi.</p></div>
+</div><p class="notice">Website ini tidak memproses atau memverifikasi pembayaran secara otomatis. Jangan unggah data rahasia atau PIN pembayaran ke website.</p></div></section>
+<section id="kontak"><div class="wrap"><div class="section-head"><div><div class="eyebrow">BUTUH BANTUAN?</div><h2>Hubungi Admin</h2></div></div>
+<p style="color:var(--muted);line-height:1.8">Ada pertanyaan tentang produk, stok, atau pembayaran? Hubungi admin melalui WhatsApp.</p>
+<a class="btn primary" id="contactChat" href="#">Chat Admin ↗</a></div></section>
+</main>
+<footer><div class="wrap foot"><span>© <span id="year"></span> MAUDIVASH MART</span><span>Digital goods • Black / Red Edition</span></div></footer>
+<script>
+// ===== PENGATURAN TOKO: EDIT BAGIAN INI =====
+const STORE = {
+  // Ganti dengan nomor WhatsApp admin, format internasional tanpa + atau spasi.
+  whatsapp: "6281234567890",
+  currency: "IDR",
+  products: [
+    {id:1,name:"Streaming Premium",category:"Streaming",price:23500,stock:3,icon:"▶",description:"Contoh produk. Tambahkan detail paket, durasi, dan ketentuan."},
+    {id:2,name:"Aplikasi Produktivitas",category:"Aplikasi",price:15000,stock:5,icon:"✦",description:"Contoh produk. Jelaskan perangkat yang didukung dan masa aktif."},
+    {id:3,name:"Produk Digital Lainnya",category:"Lainnya",price:10000,stock:0,icon:"◈",description:"Contoh produk. Ganti nama, harga, deskripsi, dan stok."}
+  ]
+};
+// ==========================================
+const rupiah = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:STORE.currency,maximumFractionDigits:0}).format(n);
+const waUrl = text => `https://wa.me/${STORE.whatsapp}?text=${encodeURIComponent(text)}`;
+document.getElementById("heroChat").href=waUrl("Halo Maudivash Mart, saya ingin bertanya tentang produk.");
+document.getElementById("contactChat").href=waUrl("Halo Maudivash Mart, saya ingin bertanya.");
+document.getElementById("year").textContent=new Date().getFullYear();
+function render(){
+ const query=document.getElementById("search").value.toLowerCase().trim();
+ const cat=document.getElementById("category").value;
+ const list=STORE.products.filter(p=>(cat==="all"||p.category===cat)&&(p.name+" "+p.description).toLowerCase().includes(query));
+ const root=document.getElementById("products");
+ if(!list.length){root.innerHTML='<p style="color:#aaa">Produk tidak ditemukan.</p>';return;}
+ root.innerHTML=list.map(p=>`<article class="product">
+   <div class="product-top"><div class="product-icon">${p.icon}</div><span class="pill ${p.stock<=0?'out':''}">${p.stock>0?'TERSEDIA':'STOK HABIS'}</span></div>
+   <h3>${escapeHtml(p.name)}</h3><p class="desc">${escapeHtml(p.description)}</p>
+   <div class="price-row"><span class="price">${rupiah(p.price)}</span><span class="stock">${p.stock>0?'Stok: '+p.stock:'Cek kembali nanti'}</span></div>
+   <button class="btn primary" ${p.stock<=0?'disabled':''} onclick="order(${p.id})">${p.stock>0?'Pesan via WhatsApp':'Stok Habis'}</button>
+ </article>`).join("");
+}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function order(id){const p=STORE.products.find(x=>x.id===id);if(!p||p.stock<=0)return;const msg=`Halo Maudivash Mart, saya ingin memesan:\nProduk: ${p.name}\nHarga tertera: ${rupiah(p.price)}\nMohon konfirmasi stok dan total pembayaran. Terima kasih.`;window.open(waUrl(msg),"_blank","noopener");}
+document.getElementById("search").addEventListener("input",render);
+document.getElementById("category").addEventListener("change",render);
+render();
+</script>
+</body>
+</html>
