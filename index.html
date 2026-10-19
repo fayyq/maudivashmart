@@ -61,11 +61,81 @@ const STORE = {
   // Ganti dengan nomor WhatsApp admin, format internasional tanpa + atau spasi.
   whatsapp: "6281234567890",
   currency: "IDR",
-  products: [
-    {id:1,name:"Streaming Premium",category:"Streaming",price:23500,stock:3,icon:"▶",description:"Contoh produk. Tambahkan detail paket, durasi, dan ketentuan."},
-    {id:2,name:"Aplikasi Produktivitas",category:"Aplikasi",price:15000,stock:5,icon:"✦",description:"Contoh produk. Jelaskan perangkat yang didukung dan masa aktif."},
-    {id:3,name:"Produk Digital Lainnya",category:"Lainnya",price:10000,stock:0,icon:"◈",description:"Contoh produk. Ganti nama, harga, deskripsi, dan stok."}
-  ]
+  
+products: [
+  {
+    id: 1,
+    name: "Nokwa Gar 1 Bulan",
+    category: "Lainnya",
+    price: 8000,
+    stock: 0,
+    icon: "",
+    description: "Nokwa garansi 1 bulan"
+  },
+  {
+    id: 2,
+    name: "Nokwa Gar 2–3 Bulan",
+    category: "Lainnya",
+    price: 14000,
+    stock: 0,
+    icon: "",
+    description: "Nokwa garansi 2–3 bulan"
+  },
+  {
+    id: 3,
+    name: "Nokwa Gar 4 Bulan",
+    category: "Lainnya",
+    price: 18000,
+    stock: 0,
+    icon: "",
+    description: "Nokwa garansi 4 bulan"
+  },
+  {
+    id: 4,
+    name: "Nokwa 1 Tahun",
+    category: "Lainnya",
+    price: 25000,
+    stock: 0,
+    icon: "",
+    description: "Nokwa garansi 1 tahun"
+  },
+  {
+    id: 5,
+    name: "Noktel",
+    category: "Lainnya",
+    price: 6000,
+    stock: 0,
+    icon: "",
+    description: "Harga Rp5.000–Rp6.000"
+  },
+  {
+    id: 6,
+    name: "Nokos E-Wallet",
+    category: "Lainnya",
+    price: 2000,
+    stock: 0,
+    icon: "",
+    description: "Nokos E-Wallet"
+  },
+  {
+    id: 7,
+    name: "Nokos All Aplikasi",
+    category: "Lainnya",
+    price: 1000,
+    stock: 0,
+    icon: "",
+    description: "Nokos untuk semua aplikasi"
+  },
+  {
+    id: 8,
+    name: "Verul",
+    category: "Lainnya",
+    price: 1000,
+    stock: 0,
+    icon: "",
+    description: "Layanan Verul"
+  }
+]
 };
 // ==========================================
 const rupiah = n => new Intl.NumberFormat("id-ID",{style:"currency",currency:STORE.currency,maximumFractionDigits:0}).format(n);
