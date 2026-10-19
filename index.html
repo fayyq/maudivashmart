@@ -20,11 +20,19 @@ footer{border-top:1px solid var(--line);padding:25px 0;color:var(--muted);font-s
 .notice{font-size:11px;color:#8f8589;line-height:1.6;margin-top:18px}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding-top:48px}.hero-card{min-height:180px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.info-grid{grid-template-columns:1fr}.paybox{grid-template-columns:1fr}.navlinks{gap:12px;font-size:12px}.brand{font-size:13px}}
 @media(max-width:480px){.grid{grid-template-columns:1fr}.navlinks a:nth-child(2){display:none}.section-head{align-items:start;flex-direction:column}.hero h1{letter-spacing:-1.5px}}
+.logo-img {
+  width: 46px;
+  height: 46px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #a52b43;
+  display: block;
+}
 </style>
 </head>
 <body>
 <header><div class="wrap nav">
-  <a class="brand" href="#"><span class="logo">M</span><span>MAUDIVASH MART<small>DIGITAL GOODS STORE</small></span></a>
+  <a class="brand" href="#"><img class="logo-img" src="gc-profile.png" alt="Maudivash Mart"><span>MAUDIVASH MART<small>DIGITAL GOODS STORE</small></span></a>
   <nav class="navlinks"><a href="#katalog">Katalog</a><a href="#pembayaran">Pembayaran</a><a href="#kontak">Kontak</a></nav>
 </div></header>
 <main>
